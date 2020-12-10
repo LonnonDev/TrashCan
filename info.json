@@ -1,0 +1,10 @@
+{
+    "name": "TrashCan",
+    "version": "1.0.0",
+    "title": "TrashCan",
+    "author": "LonnonjamesD",
+    "contact": "lonnonjamesd@gmail.com",
+    "description": "Allows you to delete items",
+    "factorio_version": "1.1",
+    "dependencies": ["base >= 1.1.1"]
+}
