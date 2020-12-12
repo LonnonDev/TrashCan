@@ -9,7 +9,7 @@ data:extend {
         type = "infinity-container",
         gui_mode = "none",
         name = "trashcan",
-        icon = "__TrashChest__/Graphics/trashcan.png",
+        icon = "__TrashChest__/Graphics/hr-trashcan.png",
         tint = { a = 255, r = 255, g = 255, b = 255},
         icon_size = 64, icon_mipmaps = 4,
         flags = {"placeable-neutral", "player-creation"},
