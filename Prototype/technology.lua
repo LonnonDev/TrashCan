@@ -3,7 +3,7 @@ data:extend{
         type = "technology",
         name = "trashcan",
         icon_size = 64,
-        icon = "__TrashCan__/Graphics/hr-trashcan.png",
+        icon = "__TrashChest__/Graphics/hr-trashcan.png",
         effects = 
         {
             {

@@ -9,7 +9,7 @@ data:extend {
         type = "infinity-container",
         gui_mode = "none",
         name = "trashcan",
-        icon = "__base__/graphics/icons/wooden-chest.png",
+        icon = "__TrashChest__/Graphics/trashcan.png",
         tint = { a = 255, r = 255, g = 255, b = 255},
         icon_size = 64, icon_mipmaps = 4,
         flags = {"placeable-neutral", "player-creation"},
@@ -30,7 +30,7 @@ data:extend {
           layers =
           {
             {
-              filename = "__TrashCan__/Graphics/trashcan.png",
+              filename = "__TrashChest__/Graphics/trashcan.png",
               tint = { a = 255, r = 255, g = 255, b = 255},
               priority = "extra-high",
               width = 32,
@@ -38,7 +38,7 @@ data:extend {
               shift = util.by_pixel(0.5, -2),
             },
             {
-              filename = "__TrashCan__/Graphics/hr-trashcan.png",
+              filename = "__TrashChest__/Graphics/hr-trashcan.png",
               priority = "extra-high",
               width = 52,
               height = 20,
