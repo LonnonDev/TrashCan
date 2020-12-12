@@ -13,7 +13,7 @@ data:extend {
         tint = { a = 255, r = 255, g = 255, b = 255},
         icon_size = 64, icon_mipmaps = 4,
         flags = {"placeable-neutral", "player-creation"},
-        minable = {mining_time = 0.1, result = "wooden-chest"},
+        minable = {mining_time = 0.1, result = "trashcan"},
         max_health = 100,
         corpse = "wooden-chest-remnants",
         dying_explosion = "wooden-chest-explosion",
@@ -34,22 +34,40 @@ data:extend {
               tint = { a = 255, r = 255, g = 255, b = 255},
               priority = "extra-high",
               width = 32,
-              height = 36,
+              height = 32,
               shift = util.by_pixel(0.5, -2),
+              hrversion = {
+                {
+                  filename = "__TrashChest__/Graphics/trashcan.png",
+                  tint = { a = 255, r = 255, g = 255, b = 255},
+                  priority = "extra-high",
+                  width = 64,
+                  height = 64,
+                  shift = util.by_pixel(0.5, -2),
+                }
+              }
             },
             {
-              filename = "__TrashChest__/Graphics/hr-trashcan.png",
+              filename = "__TrashChest__/Graphics/trashcan-shadow.png",
               priority = "extra-high",
-              width = 52,
-              height = 20,
+              width = 32,
+              height = 32,
               shift = util.by_pixel(10, 6.5),
               draw_as_shadow = true,
+              hrversion = {
+                {
+                  filename = "__TrashChest__/Graphics/hr-trashcan-shadow.png",
+                  tint = { a = 255, r = 255, g = 255, b = 255},
+                  priority = "extra-high",
+                  width = 64,
+                  height = 64,
+                  shift = util.by_pixel(0.5, -2),
+                  draw_as_shadow = true
+                }
+              }
             }
-          }
+          },
         },
-        circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-        circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
-        circuit_wire_max_distance = default_circuit_wire_max_distance,
         erase_contents_when_mined = true
       }
 }
