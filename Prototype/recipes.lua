@@ -2,11 +2,11 @@ data:extend {
     {
         type = "recipe",
         name = "trashcan",
-        enabled = true,
+        enabled = false,
         ingredients =
         {
-          {"plastic-bar", 10},
-          {"electronic-circuit", 5}
+          {"iron-plate", 100},
+          {"electronic-circuit", 25}
         },
         energy_required = 15,
         result = "trashcan",

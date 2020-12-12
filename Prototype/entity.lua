@@ -2,16 +2,15 @@ require ("util")
 
 local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
-local movement_triggers = require("__base__.prototypes.entity.movement-triggers")
-local spidertron_animations = require("__base__.prototypes.entity.spidertron-animations")
 
 
 data:extend {
     {
-        type = "container",
+        type = "infinity-container",
+        gui_mode = "none",
         name = "trashcan",
         icon = "__base__/graphics/icons/wooden-chest.png",
-        tint = { a = 1, b = 0, g = 0, r = 0 },
+        tint = { a = 255, r = 255, g = 255, b = 255},
         icon_size = 64, icon_mipmaps = 4,
         flags = {"placeable-neutral", "player-creation"},
         minable = {mining_time = 0.1, result = "wooden-chest"},
@@ -31,45 +30,26 @@ data:extend {
           layers =
           {
             {
-              filename = "__base__/graphics/entity/wooden-chest/wooden-chest.png",
-              tint = { a = 1, b = 0, g = 0, r = 0 },
+              filename = "__TrashCan__/Graphics/trashcan.png",
+              tint = { a = 255, r = 255, g = 255, b = 255},
               priority = "extra-high",
               width = 32,
               height = 36,
               shift = util.by_pixel(0.5, -2),
-              hr_version =
-              {
-                filename = "__base__/graphics/entity/wooden-chest/hr-wooden-chest.png",
-                tint = { a = 1, b = 0, g = 0, r = 0 },
-                priority = "extra-high",
-                width = 62,
-                height = 72,
-                shift = util.by_pixel(0.5, -2),
-                scale = 0.5
-              }
             },
             {
-              filename = "__base__/graphics/entity/wooden-chest/wooden-chest-shadow.png",
+              filename = "__TrashCan__/Graphics/hr-trashcan.png",
               priority = "extra-high",
               width = 52,
               height = 20,
               shift = util.by_pixel(10, 6.5),
               draw_as_shadow = true,
-              hr_version =
-              {
-                filename = "__base__/graphics/entity/wooden-chest/hr-wooden-chest-shadow.png",
-                priority = "extra-high",
-                width = 104,
-                height = 40,
-                shift = util.by_pixel(10, 6.5),
-                draw_as_shadow = true,
-                scale = 0.5
-              }
             }
           }
         },
         circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
         circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
-        circuit_wire_max_distance = default_circuit_wire_max_distance
+        circuit_wire_max_distance = default_circuit_wire_max_distance,
+        erase_contents_when_mined = true
       }
 }

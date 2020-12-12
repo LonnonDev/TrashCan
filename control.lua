@@ -1,6 +1,6 @@
-script.on_event(defines.events.on_tick, function(event)
-    local trashcan = game.surfaces['nauvis'].find_entities_filtered{name='trashcan', type="container"}
-    print(trashcan)
-    trashcan.get_inventory(defines.inventory.chest).clear()
-  end)
+script.on_event(defines.events.on_built_entity, function(event)
+  if event.created_entity.name == "trashcan" then
+    event.created_entity.remove_unfiltered_items = true
+  end
+end)
 
